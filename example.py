@@ -1,22 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[281]:
-
+#Author: Sanger Steel
 
 from functions import *
 from main import *
 import numpy as np
 from segmented_functions import *
 
-
-# In[ ]:
-
-
-
-
-
-# In[282]:
 
 
 x = np.linspace(1,10,300)
@@ -26,7 +17,6 @@ y=np.array(y)
 y=y.reshape((300,1))
 
 
-# In[283]:
 
 
 sol=main(x,y)
@@ -37,14 +27,12 @@ params_segmentedTwo = sol[3][2]
 params_segmentedThree = sol[3][3]
 
 
-# In[284]:
 
 
 xold  = np.linspace(1,10,300)
 x = np.linspace(1,10,1000)
 
 
-# In[285]:
 
 
 func = seg_One(x,*params_segmentedOne)
@@ -52,14 +40,6 @@ func2 = poly.polyval(x,params_poly)
 func3 = seg_Two(x,*params_segmentedTwo)
 func4 = seg_Three(x,*params_segmentedThree)
 
-
-# In[ ]:
-
-
-
-
-
-# In[286]:
 
 
 plt.figure(figsize=(12,10))
@@ -75,7 +55,6 @@ plt.plot(x,func2, color='black',label = 'Polynomial best fit')
 plt.legend()
 
 
-# In[ ]:
 
 
 
