@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[25]:
-
+# Author: Sanger Steel
 
 from functions import *
 
 
-# In[41]:
 
 
 def main(x,y,**kwargs):
