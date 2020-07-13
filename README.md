@@ -8,7 +8,7 @@ Please feel free to submit a pull request. Any corrections or problems raised is
 # Things to note
 
 1. The y-array has to be an array of shape (N,1). 
-2. The segmented regressions tend to fail when there the number of points it is given far outnumber the training data.
+2. The segmented regressions tend to fail when the number of points is given far outnumber the length of the training data.
 3. Due to the unforgiving nature of BIC when dealing with a large number of parameters, polynomial fits greater than degree 0 and segmented regressions greater than 1 model break (each incremental model break increases parameters by 3) almost never score lowest.
 
 # Possible issues
