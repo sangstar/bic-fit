@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[300]:
+# Author: Sanger Steel
 
 
 import numpy as np
@@ -11,13 +11,6 @@ import numpy.polynomial.polynomial as poly
 import matplotlib.pyplot as plt
 import warnings
 
-# In[301]:
-
-
-
-
-
-# In[302]:
 
 
 def compute_BIC(y,model,variables):
@@ -27,7 +20,6 @@ def compute_BIC(y,model,variables):
     return np.log(len(y))*variables+len(y)*np.log(SSE/len(y))
 
 
-# In[303]:
 
 
 def polynom_best_fit(x,y,**kwargs):
@@ -48,7 +40,6 @@ def polynom_best_fit(x,y,**kwargs):
     return best_params, min(bic_scores) 
 
 
-# In[305]:
 
 
 def segmentedRegression_one(x,y,sigma):
@@ -99,7 +90,7 @@ def segmentedRegression_one(x,y,sigma):
                              
 
 
-# In[307]:
+
 
 
 def segmentedRegression_two(x,y,sigma):
@@ -161,8 +152,6 @@ def segmentedRegression_two(x,y,sigma):
     
     return piece2_params,BIC_segReg_two
 
-
-# In[309]:
 
 
 def segmentedRegression_three(x,y,sigma):
@@ -226,13 +215,8 @@ def segmentedRegression_three(x,y,sigma):
     return piece3_params,BIC_segReg_three
 
 
-# In[311]:
 
 
-# NOTE: This is only compatible with a y array of dimension (N,1)
-
-
-# In[ ]:
 
 
 
