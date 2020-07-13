@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
 import numpy as np
 
@@ -17,8 +16,6 @@ def seg_One(xVals,model_break,slopeA,slopeB,offsetA,offsetB):
     return returnArray
 
 
-# In[2]:
-
 
 def seg_Two(xVals,break1,break2,slope1,offset1,slope_mid,offset_mid,slope2,offset2):
         returnArray=[]
@@ -33,7 +30,6 @@ def seg_Two(xVals,break1,break2,slope1,offset1,slope_mid,offset_mid,slope2,offse
         return returnArray
 
 
-# In[3]:
 
 
 def seg_Three(xVals,break1,break2,break3,slope1,offset1,slope2,offset2,slope3,offset3,slope4,offset4):
@@ -51,7 +47,6 @@ def seg_Three(xVals,break1,break2,break3,slope1,offset1,slope2,offset2,slope3,of
             return returnArray
 
 
-# In[ ]:
 
 
 
