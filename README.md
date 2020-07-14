@@ -12,4 +12,9 @@ Please feel free to submit a pull request. Any corrections or problems raised is
 3. Due to the unforgiving nature of BIC when dealing with a large number of parameters, polynomial fits greater than degree 0 and segmented regressions greater than 1 model break (each incremental model break increases parameters by 3) almost never score lowest.
 
 # Possible issues
+
 1. It seems to be routinely the case that segmented regressions with 1 model break minimize BIC nearly every time, typically followed by the other segmented regressions of 2 and 3 model breaks and then followed by polynomial models. This is a bit suspicious, but likely a consequence of the fact that the residual sum of squares found using segmented regressions are typically far lower than that found with polynomial models. 
+
+# Room for improvement
+
+1. The segmented regression functions are not elegantly written and rely on nested functions. There is definitely a more efficient way to do this. 
