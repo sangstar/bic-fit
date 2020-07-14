@@ -9,6 +9,30 @@ from functions import *
 
 
 def main(x,y,**kwargs):
+    """ 
+    Fits polynomial and piecewise fits to data given,
+    and determines the best fits using BIC. Note that
+    for the return arrays, the ordering is as follows:
+    polynomial best fit, segmented regression best fit
+    with 1, 2 and 3 model breaks garnering indices 0 
+    to 3 respectively. 
+    
+    Args:
+        x (array-like) : x data
+        y (array-like) : y data. Must have dimension (N,1).
+        weights (array-like): weights to data. Default None.
+        
+    Returns:
+        params[n] : the parameters for the best fit. n is 
+                    the index of the best fit, which ranges
+                    from 0 to 3. 
+        BICS[n]   : the BIC score of the best fit. n is
+                    the index of the best fit, which ranges
+                    from 0 to 3.
+        BICS      : The BIC scores of all fits used.
+        params    : The parameters for each fit used. 
+    """    
+    
     weights = kwargs.get('weights', None)
     BICS = []
     params=[]
