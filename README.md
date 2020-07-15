@@ -10,6 +10,7 @@ Please feel free to submit a pull request. Any corrections or problems raised is
 1. The y-array has to be an array of shape (N,1). 
 2. The segmented regressions tend to fail when the number of points is given far outnumber the length of the training data.
 3. Due to the unforgiving nature of BIC when dealing with a large number of parameters, polynomial fits greater than degree 0 and segmented regressions greater than 1 model break (each incremental model break increases parameters by 3) almost never score lowest.
+4. The best fit parameters for a piecewise regression can be a bit confusing to interpret. They coincide with the arguments for the functions listed in `segmented_functions.py`
 
 # Possible issues
 
