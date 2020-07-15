@@ -14,6 +14,17 @@ import warnings
 
 
 def compute_BIC(y,model,variables):
+    """
+    Computes the BIC of a model. 
+    
+    Args:
+        y (array-like)      : y data. Must have shape
+                             (N,1).
+        model (array-like)  : model data.
+        variables (scalar)  : number of parameters for the model.
+    """           
+        
+    
     residual=y-model
     SSE=np.sum(residual**2)
   
@@ -23,6 +34,25 @@ def compute_BIC(y,model,variables):
 
 
 def polynom_best_fit(x,y,**kwargs):
+    """
+    Finds data to several polynomial fits 
+    and calculates the lowest BIC score for
+    the data.
+    
+    Args:
+        x (array-like)       : x data. Shape (N,).
+        y (array-like)       : y data. Shape (N,1).
+        weights (array-like) : weights for the data.
+                               Shape (N,). Default None.
+        deg (scalar)         : highest degree polynomial
+                               to use as a model. Default 6.
+     
+    Returns:
+        best_params (array-like) : Parameters for the lowest 
+                                   BIC fit.
+        min(bic_scores) (scalar) : BIC score for best fit. 
+    """
+                               
     weights = kwargs.get('weight', None)
     deg = kwargs.get('max_deg', 6)
     bic_scores = []
