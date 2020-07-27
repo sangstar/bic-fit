@@ -3,7 +3,7 @@
 
 A package I've been working on which takes array-like x and y data, generates polynomial and piecewise (maximally 3 model breaks) fit parameters and evaluates the BIC score used. The function of interest is `main`. Makes certain assumptions as to the nature of the error, listed here: https://en.wikipedia.org/wiki/Bayesian_information_criterion#Gaussian_special_case
 
-Please feel free to submit a pull request. Any corrections or problems raised is more than welcome. I am working to commment the work in the meantime.
+Please feel free to submit a pull request. Any corrections or problems raised is more than welcome. 
 
 # Things to note
 
