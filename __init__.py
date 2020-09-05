@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# Author: Sanger Steel
+# Author: sanger steel
 
 
 
